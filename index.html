@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+
+
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #0c090a;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Changer App</h1>
+        <button class="btn" data-color="#ff6347">Red</button>
+        <button class="btn" data-color="#4682b4">Blue</button>
+        <button class="btn" data-color="#32cd32">Green</button>
+        <button class="btn" data-color="#ff4873">Pink</button>
+        <button class="btn" data-color="#8a2be2">Violet</button>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const color = button.getAttribute('data-color');
+        document.body.style.backgroundColor = color;
+    });
+});
+
+    </script>
+</body>
+</html>
